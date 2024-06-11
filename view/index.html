@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
+    <link rel="stylesheet" href="index.css">
 </head>
+<script src="/htmx/htmx.min.js"></script>
 <body>
     <input type="text">
 
+  
+
     <h2>Helsinki</h2>
-    
+   
+    <p>Testing htmx package</p>
+    <button
+    hx-get="https://v2.jokeapi.dev/joke/Any?format=txt&safe-mode&type=single"
+    hx-target="#joke-container"
+  >
+    Make me laugh!
+  </button>
+  
+  <p id="joke-container">Click the button to load a joke...</p>
 </body>
 </html>
