@@ -8,20 +8,35 @@
 </head>
 <script src="/htmx/htmx.min.js"></script>
 <body>
-    <input type="text">
 
-  
 
-    <h2>Helsinki</h2>
-   
-    <p>Testing htmx package</p>
+<div>
+    <input type="text" id="searchField" 
+            oninput="updateParam(this.value)"
+            placeholder="Type a city ..."
+            hx-vals="{'weatherParam' : seatchValue}"
+            hx-get="http://localhost:8080/weather/Helsinki"
+            hx-trigger="click"
+            hx-target="#weather-container"
+    >   
     <button
-    hx-get="https://v2.jokeapi.dev/joke/Any?format=txt&safe-mode&type=single"
-    hx-target="#joke-container"
-  >
-    Make me laugh!
+    >
+    Search
   </button>
+</div>
   
-  <p id="joke-container">Click the button to load a joke...</p>
+  
+  <div id="weather-container">
+    <h2>Helsinki</h2>
+    Click the button to load a joke...
+  </div>
+
+  <script>
+    var seatchValue = '';
+
+    function updateParam(value) {
+        seatchValue = value;
+    }
+  </script>
 </body>
 </html>
