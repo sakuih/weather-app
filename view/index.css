@@ -1,0 +1,35 @@
+
+input {
+  padding: 5px;
+}
+
+button {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+}
+
+
+.content {
+  display: grid;
+  margin-top: 20%;
+  place-items: center;
+  align-content: center;
+  text-align: center;
+  justify-items: center;
+
+}
+
+
+
+
+#weather-container {
+  text-align: center;
+}
+
+
+
+
+
